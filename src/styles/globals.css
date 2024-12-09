@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:focus {
+    outline: none;
+    border: none;
+}
+
+#map {
+  @apply dark:fill-gray-400;
+}
+
+.video-js {
+  @apply !bg-white;
+}
+body {
+   @apply antialiased bg-white dark:bg-gray-950;
+}
+
+.drawer, .drawer a {
+  font-family: "Roboto Condensed", "Helvetica", sans-serif!important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .prose {
+  p {
+    @apply  font-sans  leading-normal;
+  }
+  h1,h2,h3,h4 {
+    @apply  font-serif  leading-normal mb-16 mt-12;
+  }
+
+  blockquote {
+    @apply   mt-12  text-sm;
+  }
+  
+   h1 {
+    @apply  text-7xl;
+  }
+
+  h2 {
+    @apply  text-6xl;
+  }
+  h3 {
+    @apply text-5xl;
+  }
+}
+
+}
+
+.shadow-top {
+  box-shadow: 0 -25px 24px 5px rgb(255 255 255 / 1);
+}
+
+.shadow-top-dark {
+  box-shadow: 0 -25px 24px 5px rgb(0 0 0 / 1);
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
