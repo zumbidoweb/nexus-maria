@@ -32,21 +32,24 @@ export default function map({ links }) {
 
       <g data-name="Group 1" transform="translate(-170 -235)" id="map">
         {links.map((link, index) => (   
-          <g key={index}>  
-            <motion.circle ref={circleRef} cx="10" cy="10" r="10"
-              initial={{ opacity: 0, r: 20 }} 
-              animate={{
-                opacity: 1, r: 10, 
-                transition: { default: { delay: 4 + (index / 2), duration: 0.5, ease: "backOut" } }
-              }}
-              className="cursor-pointer hover:opacity-100 transition-all duration-200"
-              onClick={() => router.push(`/locations/${link.slug}`)}
-              fill={link.data.color}  
-              key={index}
-              data-name={link.data.title}            
-              transform={`translate(${link.data.location})`}
-            />               
-          
+
+          <g key={index}>
+            {link.data.location && <g>   
+              <motion.circle ref={circleRef} cx="10" cy="10" r="10"
+                initial={{ opacity: 0, r: 20 }} 
+                animate={{
+                  opacity: 1, r: 10, 
+                  transition: { default: { delay: 4 + (index / 2), duration: 0.5, ease: "backOut" } }
+                }}
+                className="cursor-pointer hover:opacity-100 transition-all duration-200"
+                onClick={() => router.push(`/locations/${link.slug}`)}
+                fill={link.data.color}  
+                key={index}
+                data-name={link.data.title}            
+                transform={`translate(${link.data.location})`}
+              />               
+            </g>   
+            }
           </g>           
         ))}
       </g>

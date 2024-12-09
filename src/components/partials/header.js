@@ -43,7 +43,7 @@ export default function Header({ links }) {
                     </DrawerClose>
                   </div>
                   <DrawerTitle>
-                    <h1 className="text-6xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100">Nexus</h1>
+                    <h1 className="text-6xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100 hidden">Nexus</h1>
                   </DrawerTitle>
                   <DrawerDescription className="flex h-full items-center justify-center w-full">
                     <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4 gap-4 mb-32 overflow-auto max-h-full">

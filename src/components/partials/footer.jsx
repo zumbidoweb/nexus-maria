@@ -14,7 +14,7 @@ export default function Header({}) {
               animate={{ opacity: 1, x: 0, transition: { duration: .6 } }}>
               <RxInstagramLogo size="24px" />
               <IoShareSocial size="24px" />
-              <p className="font-serif mt-0.5"> Maria Gouveli, Greece 2024</p>
+              <p className="font-serif mt-0.5"> <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">Maria Gouveli</a>, Greece 2024</p>
             </motion.div>
             <div>
             </div>
