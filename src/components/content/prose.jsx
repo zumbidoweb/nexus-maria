@@ -17,6 +17,8 @@ export const components = {
       sizes="100vw"
       width={1600}
       height={900}
+      layout="responsive"
+      loading="lazy"
       className="max-w-4xl"
       style={{ width: '100%', height: 'auto', paddingBottom: '12px', marginTop: '-15px' }}
       {...(props)}      
@@ -25,7 +27,6 @@ export const components = {
   ),
   VideoPlayer: dynamic(() => import("./video")),
   Gallery: dynamic(() => import("./gallery")),
-  //Game: dynamic(() => import("./memory/game")),
   AudioPlayer: dynamic(() => import("./audio")),
   Interview: dynamic(() => import("./interview")),
   Head,

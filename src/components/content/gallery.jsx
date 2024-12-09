@@ -21,6 +21,7 @@ export default function Gallery({ title = '', grid = 3, folder, className = 'asp
                 fill
                 alt={image.alt}
                 sizes="(min-width: 808px) 450px, 700px"
+                loading="lazy"
                 style={{
                   objectFit: 'cover', // cover, contain, none
                 }}

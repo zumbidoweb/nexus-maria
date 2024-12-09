@@ -14,6 +14,7 @@ export default function VideoPlayer({ title = '', width = "1920", height = "1080
       </div>
       <div data-scroll data-scroll-speed="1/2">  
         <CldVideoPlayer autoplay loop muted
+          bigPlayButton={false}
           width={width}
           height={height}
           controls={true}
