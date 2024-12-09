@@ -38,7 +38,7 @@ export default function Index({ posts }) {
           <motion.div  
             initial={{ opacity: 0, y: 10, }} animate={{ y: 0, opacity: 1, transition: { duration: .5, delay: 6 } }} 
             className="mt-8">   
-            <Link class="text font-serif uppercase font-semibold  tracking-wide  bg-black rounded-sm px-6 py-2 cursor-pointer hover:bg-red-700 inline-block text-white" href="/locations/about">  
+            <Link className="text font-serif uppercase font-semibold  tracking-wide  bg-black rounded-sm px-6 py-2 cursor-pointer hover:bg-red-700 inline-block text-white" href="/locations/about">  
               <div className="flex gap-3 items-center">       
                 View project
               </div>   

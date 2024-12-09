@@ -14,7 +14,7 @@ export default function Interview({ children, title = '', intro = '', className 
           <CollapsibleTrigger className="text-left">
             {title} 
             <p className="mb-0">"{intro}"</p>
-            <p class="font-semibold text-sm mt-2 text-right">Read full interview +</p>
+            <p className="font-semibold text-sm mt-2 text-right">Read full interview +</p>
          
           </CollapsibleTrigger>
           <CollapsibleContent>

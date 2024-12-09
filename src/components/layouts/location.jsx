@@ -54,14 +54,14 @@ export default function LocationLayout({ children, posts, data, slug }) {
                 </motion.div> 
              
                 {slug == 'about' &&
-                  <section class="mt-16 max-w-4xl"> 
+                  <section className="mt-16 max-w-4xl"> 
                     <h2 className=" font-semibold text-4xl font-serif mb-12">Project and locations</h2>
                     <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-6">
                       {posts && posts.map((post, index) => ( 
                         <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                            
                           <Link className="hover:opacity-100 opacity-80 duration-100 transition-all" href={`/locations/${post.slug}`}>
                             <Image className="object-cover aspect-video w-full" alt={post.slug} height={400} width={1000} src={`/locations/${post.slug}/cover.jpg`} />
-                            <p class="font-semibold font-sans text-base mt-1  text-black">
+                            <p className="font-semibold font-sans text-base mt-1  text-black">
                               {post.data.title}
                             </p>
                           </Link>

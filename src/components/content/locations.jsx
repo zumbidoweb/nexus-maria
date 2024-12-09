@@ -9,7 +9,7 @@ export default function locations({ title = '', ...props }) {
           <li className="aspect-video overflow-hidden" key={index} >                                            
             <Link className="hover:opacity-100 opacity-60 duration-100 transition-all" href={`/locations/${link.slug}`}>
               <Image className="object-cover aspect-video w-full" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
-              <p class="font-medium font-sans text-lg xl:text-xl -mt-10 ml-4 text-white">
+              <p className="font-medium font-sans text-lg xl:text-xl -mt-10 ml-4 text-white">
                 {link.data.title}
               </p>
             </Link>
