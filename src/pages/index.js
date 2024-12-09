@@ -18,9 +18,9 @@ import { TbHexagonLetterNFilled } from "react-icons/tb";
 
 export default function Index({ posts }) {
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="relative h-screen w-screen overflow-hidden bg-white">
       <div className="absolute px-16 right-0 left-0 z-20 top-[32%] ">
-        <div className="max-w-2xl mx-auto text-center bg-white shadow-white p-10  prounded">
+        <div className="max-w-2xl mx-auto text-center bg-white 0 shadow-white dark:shadow-none p-10  text-gray-900 rounded ">
           <motion.h1 
             className="text-7xl font-semibold mb-4 font-serif" 
             initial={{ y: -10, opacity: 0 }}
@@ -33,7 +33,7 @@ export default function Index({ posts }) {
           <motion.div  
             initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .5, delay: 3.5 } }} 
             className="prose-sm  dark:prose-invert max-w-none mt-6">                 
-            <p>This is an art project without clear dividing lines between artwork, research, social engagement and documentation. Like a plexus, it is an interwoven combination of elements in one structure.All elements are correlated and mingled in a dynamic mapping process. </p>
+            <p className="font-medium">This is an art project without clear dividing lines between artwork, research, social engagement and documentation. Like a plexus, it is an interwoven combination of elements in one structure.All elements are correlated and mingled in a dynamic mapping process. </p>
           </motion.div> 
           <motion.div  
             initial={{ opacity: 0, y: 10, }} animate={{ y: 0, opacity: 1, transition: { duration: .5, delay: 6 } }} 
