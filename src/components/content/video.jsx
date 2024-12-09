@@ -6,9 +6,9 @@ import 'next-cloudinary/dist/cld-video-player.css';
 
 
 
-export default function VideoPlayer({ title = '', width = "1920", height = "1080", src, className = "max-w-sm", ...props }) {
+export default function VideoPlayer({ title = '', width = "1920", height = "1080", src, className = "", ...props }) {
   return (
-    <section className={`${className} `}> 
+    <section className={`w-full ${className} `}> 
       <div>       
         {title && <h2>{title}</h2>}
       </div>

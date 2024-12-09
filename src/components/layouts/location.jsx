@@ -49,7 +49,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                 </motion.div>
                 <motion.div  
                   initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .3, delay: 0.7 } }} 
-                  className="prose  dark:prose-invert max-w-5xl mt-16 space-y-8">
+                  className="prose  dark:prose-invert max-w-5xl mt-20 space-y-8">
                   {children}
                 </motion.div> 
              

@@ -18,7 +18,7 @@ export const components = {
       width={1600}
       height={900}
       className="max-w-4xl"
-      style={{ width: '100%', height: 'auto', paddingBottom: '15px', marginTop: '-20px' }}
+      style={{ width: '100%', height: 'auto', paddingBottom: '12px', marginTop: '-15px' }}
       {...(props)}      
       src={`/locations/${props.src}`}
     />
