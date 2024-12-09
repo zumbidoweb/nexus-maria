@@ -20,7 +20,7 @@ export default function map({ links }) {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{
-              duration: 12,
+              duration: 10,
               delay: (index > 100 ? ((index - (index - 10)) + index / 100) : index / 10), 
             }}
             strokeDasharray="0 1"

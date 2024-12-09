@@ -27,16 +27,16 @@ export default function Index({ posts }) {
             animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}>   
             Nexus
           </motion.h1>  
-          <motion.p className="font-medium font-serif text-lg " initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .5, delay: 1.5 } }}>
+          <motion.p className="font-medium font-serif text-lg " initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .5, delay: 1.7 } }}>
             Art, research, social engagement and documentation in one interwoven structure.        
           </motion.p>
           <motion.div  
-            initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .5, delay: 3.5 } }} 
+            initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .5, delay: 3 } }} 
             className="prose-sm  dark:prose-invert max-w-none mt-6">                 
             <p className="font-medium">This is an art project without clear dividing lines between artwork, research, social engagement and documentation. Like a plexus, it is an interwoven combination of elements in one structure.All elements are correlated and mingled in a dynamic mapping process. </p>
           </motion.div> 
           <motion.div  
-            initial={{ opacity: 0, y: 10, }} animate={{ y: 0, opacity: 1, transition: { duration: .5, delay: 6 } }} 
+            initial={{ opacity: 0, y: 10, }} animate={{ y: 0, opacity: 1, transition: { duration: .5, delay: 6.5 } }} 
             className="mt-8">   
             <Link className="text font-serif uppercase font-semibold  tracking-wide  bg-black rounded-sm px-6 py-2 cursor-pointer hover:bg-red-700 inline-block text-white" href="/locations/about">  
               <div className="flex gap-3 items-center">       
