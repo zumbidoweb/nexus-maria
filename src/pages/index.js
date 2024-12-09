@@ -20,7 +20,7 @@ export default function Index({ posts }) {
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-white">
 
-      <div className="absolute  h-screen w-screen  z-10 opacity-30 md:opacity-100">  
+      <div className="absolute  h-screen w-screen  z-10 opacity-50 md:opacity-100">  
         <MapAnimated links={posts} />   
       </div>  
 

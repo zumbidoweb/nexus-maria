@@ -34,24 +34,21 @@ export default function Header({ links }) {
             <ModeToggle />           
             <Drawer>
               <DrawerTrigger><VscMenu className="cursor-pointer" size="24px" /></DrawerTrigger>
-              <DrawerContent>
-              
-                <div className="h-[98vh] py-12 container">
+              <DrawerContent>              
+                <div className="h-[98vh] py-12 px-0 md:px-8  container">
                   <div className="w-full flex justify-end">
                     <DrawerClose>                    
                       <VscClose className="text-gray-400" size="32px" />
                     </DrawerClose>
                   </div>
                   <DrawerTitle>
-                    <h1 className="text-6xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100 hidden">Nexus</h1>
+                    <h1 className="text-4xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100 hidden">Nexus</h1>
                   </DrawerTitle>
                   <DrawerDescription className="flex h-full items-center justify-center w-full">
-                    <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4 gap-4 mb-32 overflow-auto max-h-full">
-                     
+                    <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4 gap-4 pt-12 mb-32 overflow-auto max-h-full">                     
                       {links && links.map((link, index) => ( 
-                        <li className="aspect-video overflow-hidden" key={index} >    
-                                          
-                          <Link className="hover:opacity-100 opacity-60 duration-100 transition-all" href={`/locations/${link.slug}`}>
+                        <li className="aspect-video overflow-hidden" key={index} >                                              
+                          <Link className="hover:opacity-100 opacity-80 duration-00 transition-all" href={`/locations/${link.slug}`}>
                             <Image className="object-cover aspect-video w-full" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
                             <p className="font-medium font-sans text-lg xl:text-xl -mt-10 ml-4 text-white">
                               {link.data.title}
