@@ -10,12 +10,11 @@ export default function Interview({ children, title = '', intro = '', className 
   return (
     <div>
       <motion.section className={`${className}`} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0, transition: { ease: 'easeOut', duration: .5 } }}> 
-        <Collapsible className="bg-gray-50/85 px-6 py-2 rounded">
+        <Collapsible className="bg-gray-50/85 dark:bg-gray-900 px-6 py-2 rounded">
           <CollapsibleTrigger className="text-left">
             {title} 
             <p className="mb-0">"{intro}"</p>
-            <p className="font-semibold text-sm mt-2 text-right">Read full interview +</p>
-         
+            <p className="font-semibold text-sm mt-2 text-right">Read full interview +</p>         
           </CollapsibleTrigger>
           <CollapsibleContent>
             {children}

@@ -47,7 +47,7 @@ export default function Header({ links }) {
                     <h1 className="text-4xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100 hidden">Nexus</h1>
                   </DrawerTitle>
                   <DrawerDescription className=" h-full overflow-auto w-full lg:flex items-center justify-center">
-                    <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4  xl:grid-cols-5 gap-2 lg:gap-4 pt-10  lg:pt-0 pb-10 max-h-full  px-5">                     
+                    <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4   gap-2 lg:gap-4 pt-10  lg:pt-0 pb-6 max-h-full  px-5">                     
                       {links && links.map((link, index) => ( 
                         <li className="aspect-video overflow-hidden bg-gray-800 duration-400 transition-all" key={index} >                                              
                           <Link className="group aspect-video relative " href={`/locations/${link.slug}`}>

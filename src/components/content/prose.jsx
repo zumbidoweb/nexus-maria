@@ -18,9 +18,8 @@ export const components = {
       quality={85}
       width={1620}
       height={930}
-      layout="responsive"
       loading="lazy"
-      className="max-w-4xl"
+      className="max-w-4xl w-full"
       style={{ width: '100%', height: 'auto' }}
       {...(props)}      
       src={`/locations/${props.src}`}

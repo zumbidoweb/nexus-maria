@@ -20,6 +20,7 @@ export default function VideoPlayer({ title = '', width = "1920", height = "1080
           height={height}
           controls={true}
           src={src}
+          key={src}
         />  
         <motion.div className="flex gap-2 mt-3 pr-2 text-xs" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 0.7 } }} > 
           Audio

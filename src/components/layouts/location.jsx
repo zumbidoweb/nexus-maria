@@ -19,7 +19,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
   return (
     <>
       <Head>
-        <title>{data.title} - Nexus</title>
+        <title>{data.title}</title>
         <meta property="og:title" content={data.title} key={slug} />
         <meta property="og:image" content={`https://next.mariagouveli.com/${slug}/cover.jpg`} />
       </Head>
@@ -67,7 +67,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                             <Link className="hover:opacity-100 opacity-80 duration-100 transition-all" href={`/locations/${post.slug}`}>
                               <div className="absolute top-2 left-2 flex gap-1" >
                                 {post.data.categories && post.data.categories.map((category, index) => (
-                                  <Badge className="!text-xs dark:text-white dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
+                                  <Badge className="!text-xs dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
                                 ))}           
                               </div>
                               <Image className="object-cover aspect-video w-full" alt={post.slug} height={400} width={1000} src={`/locations/${post.slug}/cover.jpg`} />

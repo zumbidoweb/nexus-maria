@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 export default function Header({}) {
   return (
     <>  
-      <div className="z-50 relative md:fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 shadow-top  dark:shadow-2xl">
+      <div className="z-50 relative md:fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 shadow-top  dark:shadow-none">
         <div className="px-6 pt-5 pb-5 relative">
           <div className="flex justify-between item-center">          
             <motion.div 
