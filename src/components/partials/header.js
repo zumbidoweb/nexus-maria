@@ -41,8 +41,7 @@ export default function Header({ links }) {
                     <VscClose className="text-gray-400" size="36px" />
                   </DrawerClose>
                 </div>         
-                <div className="h-[98vh] px-0 md:px-8  container">
-                 
+                <div className="h-[98vh] px-0 md:px-8 container">                 
                   <DrawerTitle>
                     <h1 className="text-4xl text-center font-['Roboto_Condensed'] font-serif font-semibold mt-2 opacity-0 md:opacity-100 hidden">Nexus</h1>
                   </DrawerTitle>
@@ -51,7 +50,7 @@ export default function Header({ links }) {
                       {links && links.map((link, index) => ( 
                         <li className="aspect-video overflow-hidden bg-gray-800 duration-400 transition-all" key={index} >                                              
                           <Link className="group aspect-video relative " href={`/locations/${link.slug}`}>
-                            <div className="absolute top-2 top-2  left-6 group-hover:left-2 flex gap-1 z-20 opacity-0 group-hover:opacity-80 duration-400 transition-all" >
+                            <div className="hidden lg:block absolute top-2 top-2  left-6 group-hover:left-2 flex gap-1 z-20 opacity-0 group-hover:opacity-80 duration-400 transition-all" >
                               {link.data.categories && link.data.categories.map((category, index) => (
                                 <Badge className="!text-xs " key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
                               ))}           

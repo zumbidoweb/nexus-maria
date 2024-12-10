@@ -60,12 +60,12 @@ export default function LocationLayout({ children, posts, data, slug }) {
                   </motion.div>              
                   {slug == 'about' &&
                     <section className="mt-10 xl:mt-16 lg:mt-16 max-w-4xl"> 
-                      <h2 className=" font-semibold text-4xl font-serif mb-12">Project and locations</h2>
-                      <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-8">
+                      <h2 className=" font-semibold text-4xl font-serif mb-16">Project and locations</h2>
+                      <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-10 lg:gap-y-4">
                         {posts && posts.map((post, index) => ( 
                           <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                          
                             <Link className="hover:opacity-100 opacity-80 duration-100 transition-all relative" href={`/locations/${post.slug}`}>
-                              <div className="absolute top-2 left-2 flex gap-1 opacity-90" >
+                              <div className="hidden lg:block absolute top-2 left-2 flex gap-1 opacity-90 " >
                                 {post.data.categories && post.data.categories.map((category, index) => (
                                   <Badge className="!text-xs dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
                                 ))}           

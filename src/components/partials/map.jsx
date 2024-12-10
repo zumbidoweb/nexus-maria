@@ -18,7 +18,7 @@ const Map = function ({ links }) {
             <g key={index}>
               {link.data.location && <g>            
                 <motion.circle ref={circleRef} cx="10" cy="10" r="23"
-                  initial={{ opacity: 0, r: 30 }} animate={{ opacity: 1, r: 23, transition: { default: { delay: 0.5 + (index / 4), duration: 0.5, ease: "easeOut" } } }}
+                  initial={{ opacity: 0, r: 0 }} animate={{ opacity: 1, r: 24, transition: { default: { delay: 0.5 + (index / 4), duration: 0.5, ease: "easeOut" } } }}
                   className="cursor-pointer hover:opacity-50 opacity-100 transition-all duration-100"
                   onClick={() => router.push(`/locations/${link.slug}`)}
                   fill={link.data.color}  
