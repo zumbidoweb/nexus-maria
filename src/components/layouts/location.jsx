@@ -59,19 +59,19 @@ export default function LocationLayout({ children, posts, data, slug }) {
                     {children}
                   </motion.div>              
                   {slug == 'about' &&
-                    <section className="mt-8 lg:mt-16 max-w-4xl"> 
+                    <section className="mt-10 xl:mt-16 lg:mt-16 max-w-4xl"> 
                       <h2 className=" font-semibold text-4xl font-serif mb-12">Project and locations</h2>
-                      <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-6">
+                      <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-8">
                         {posts && posts.map((post, index) => ( 
                           <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                          
-                            <Link className="hover:opacity-100 opacity-80 duration-100 transition-all" href={`/locations/${post.slug}`}>
-                              <div className="absolute top-2 left-2 flex gap-1" >
+                            <Link className="hover:opacity-100 opacity-80 duration-100 transition-all relative" href={`/locations/${post.slug}`}>
+                              <div className="absolute top-2 left-2 flex gap-1 opacity-90" >
                                 {post.data.categories && post.data.categories.map((category, index) => (
                                   <Badge className="!text-xs dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
                                 ))}           
                               </div>
                               <Image className="object-cover aspect-video w-full" alt={post.slug} height={400} width={1000} src={`/locations/${post.slug}/cover.jpg`} />
-                              <p className="font-sans text-lg font-bold mt-1  ">
+                              <p className="font-sans text-lg font-bold mt-1 ">
                                 {post.data.title}
                               </p>
                             </Link>
