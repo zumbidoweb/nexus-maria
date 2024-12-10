@@ -22,22 +22,26 @@ export default function LocationLayout({ children, posts, data, slug }) {
       <div className="lg:flex">
      
         <div className="lg:w-1/3 relative  fixed lg:-top-10 left-0 z-10 ">
-          <div className="pl-2 lg:pl-6 max-w-2xl lg:pr-0  pt-16 lg:pt-32 w-full relative top-0 left-0 ">   
+
+          <div className="pl-2 lg:pl-6 max-w-2xl lg:pr-0  pt-24 lg:pt-32 w-full relative top-0 left-0 ">   
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .8 } }}>       
               <Map links={posts} /> 
               <div className="-mt-7 text-xs text-gray-500 text-center">click at the dots to navigate</div> 
             </motion.div>  
           </div>   
+
         </div> 
 
-        <div className="lg:w-2/3 relative  pl-4 xl:pl-12  pr-4 lg:pr-16 bg-white dark:bg-gray-950 z-20" key={data.color}>
+        <div className="lg:w-2/3 relative  pl-6 pr-6  xl:pl-12 lg:pr-16  bg-white dark:bg-gray-950 z-20" key={data.color}>
 
           <LocomotiveScrollProvider options={{ smooth: true, tablet: { breakpoint: 0 }, tablet: { smooth: false } }} containerRef={containerRef} watch={[router.asPath]}>
+
             <section className="py-0 pb-12  sm:py-12 md:py-20 lg:py-36  xl:py-32 2xl:py-40 " data-scroll-container ref={containerRef}>  
 
-              <div className="bg-white  dark:bg-gray-950 pt-4 shadow-top dark:shadow-xl">       
+              <div className="bg-white  dark:bg-gray-950 pt-4 shadow-top dark:shadow-xl">   
+
                 <motion.h1 
-                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mt-0 lg:mt-4 font-serif" 
+                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mb-2 lg:mt-4 font-serif" 
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1, transition: { duration: .5 } }}>   
                   {data.title}
@@ -49,7 +53,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                 </motion.div>
                 <motion.div  
                   initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .3, delay: 0.7 } }} 
-                  className="prose  dark:prose-invert max-w-4xl mt-4  lg:mt-20 space-y-4 md:space-y-8">
+                  className="prose  dark:prose-invert max-w-4xl mt-10  lg:mt-16 space-y-4 md:space-y-6">
                   {children}
                 </motion.div> 
              

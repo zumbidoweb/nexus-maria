@@ -15,12 +15,12 @@ export const components = {
     <Image
       data-scroll data-scroll-speed="2"
       sizes="100vw"
-      width={1600}
-      height={900}
+      width={1620}
+      height={930}
       layout="responsive"
       loading="lazy"
       className="max-w-4xl"
-      style={{ width: '100%', height: 'auto', paddingBottom: '12px', marginTop: '-15px' }}
+      style={{ width: '100%', height: 'auto' }}
       {...(props)}      
       src={`/locations/${props.src}`}
     />

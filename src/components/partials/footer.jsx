@@ -5,16 +5,27 @@ import { motion } from "motion/react"
 export default function Header({}) {
   return (
     <>  
-      <div className="z-50 fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 shadow-top dark:shadow-2xl">
-        <div className="p-6">
-          <div className="flex justify-between">          
+      <div className="z-50 relative md:fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 shadow-top  dark:shadow-2xl">
+        <div className="px-6 pt-3 pb-7 relative">
+          <div className="flex justify-between item-center">          
             <motion.div 
               className="flex gap-3 items-center"
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0, transition: { duration: .6 } }}>
-              <RxInstagramLogo size="24px" />
-              <IoShareSocial size="24px" />
-              <p className="font-serif mt-0.5"> <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">Maria Gouveli</a>, Greece 2024</p>
+
+              <a href="mailo:gouveli.art@gmail.com">
+                <IoShareSocial size="24px" />
+              </a>
+
+              <p className="font-serif text-sm md:text-base  text-right"> 
+                Greece 2024,  <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
+                  Maria Gouveli 
+                </a>  
+                <span className="mx-1.5">|</span>
+                <a href="https://www.turning-thetide.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
+                  Turning the tide
+                </a>
+              </p>
             </motion.div>
             <div>
             </div>
