@@ -18,10 +18,10 @@ export default function Header({}) {
               </a>
 
               <p className="font-serif text-sm md:text-base  text-right"> 
-                Greece 2024,  <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
+                Greece 2024 |  <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
                   Maria Gouveli 
                 </a>  
-                <span className="mx-1.5">|</span>
+                <span> | </span>
                 <a href="https://www.turning-thetide.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
                   Turning the tide
                 </a>

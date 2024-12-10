@@ -15,7 +15,7 @@ export default function Gallery({ title = '', grid = 3, folder, className = 'asp
       <div className={`grid  ${['grid-cols-1 gap-6', 'md:grid-cols-2 gap-6', 'md:grid-cols-2 xl:grid-cols-3 gap-6', 'md:grid-cols-3 xl:grid-cols-4 gap-6', 'md:grid-cols-1 xl:grid-cols-2 gap-0'][grid - 1]}`}>
         {images.map((image, index) => (  
           <motion.div className={className} key={index} initial={{ opacity: 0, y: 120 }} viewport={{ once: false }} whileInView={{ opacity: 1, y: 0, transition: { ease: 'easeOut', duration: .5, delay: index % 2 !== 0 ? .2 : 0 } }}>     
-            <div className={`w-full ${className} relative opacity-85 hover:opacity-100 duration-300 transition-all hover:cursor-pointer`} onClick={function () { setOpen(true); setCurrentSlide(index); }} >
+            <div className={`w-full ${className} relative opacity-80 hover:opacity-100 duration-200 transition-all hover:cursor-pointer`} onClick={function () { setOpen(true); setCurrentSlide(index); }} >
               <Image
                 src={image.src}
                 fill

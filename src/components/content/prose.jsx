@@ -14,7 +14,8 @@ export const components = {
   img: (props) => (
     <Image
       data-scroll data-scroll-speed="2"
-      sizes="100vw"
+      sizes="960px"
+      quality={85}
       width={1620}
       height={930}
       layout="responsive"

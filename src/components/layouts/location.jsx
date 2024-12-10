@@ -21,12 +21,12 @@ export default function LocationLayout({ children, posts, data, slug }) {
 
       <div className="lg:flex">
      
-        <div className="lg:w-1/3 relative  fixed lg:-top-10 left-0 z-10 ">
+        <div className="lg:w-1/3 relative  fixed -top-2 lg:-top-10 left-0 z-10 ">
 
           <div className="pl-2 lg:pl-6 max-w-2xl lg:pr-0  pt-24 lg:pt-32 w-full relative top-0 left-0 ">   
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .8 } }}>       
               <Map links={posts} /> 
-              <div className="-mt-7 text-xs text-gray-500 text-center">click at the dots to navigate</div> 
+              <div className="-mt-7 text-xs text-gray-500 text-center hidden  lg:block">click at the dots to navigate</div> 
             </motion.div>  
           </div>   
 
