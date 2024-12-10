@@ -41,7 +41,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
               <div className="bg-white  dark:bg-gray-950 pt-4 shadow-top dark:shadow-xl">   
 
                 <motion.h1 
-                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mb-2 lg:mt-4 font-serif" 
+                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mb-3 lg:mt-4 font-serif" 
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1, transition: { duration: .5 } }}>   
                   {data.title}
