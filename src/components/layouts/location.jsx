@@ -21,7 +21,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
 
       <div className="lg:flex">
      
-        <div className="lg:w-1/3 relative  fixed -top-2 lg:-top-10 left-0 z-10 ">
+        <div className="lg:w-1/3 relative  fixed -top-3 lg:-top-10 left-0 z-10 ">
 
           <div className="pl-2 lg:pl-6 max-w-2xl lg:pr-0  pt-24 lg:pt-32 w-full relative top-0 left-0 ">   
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .8 } }}>       
@@ -38,10 +38,10 @@ export default function LocationLayout({ children, posts, data, slug }) {
 
             <section className="py-0 pb-12  sm:py-12 md:py-20 lg:py-36  xl:py-32 2xl:py-40 " data-scroll-container ref={containerRef}>  
 
-              <div className="bg-white  dark:bg-gray-950 pt-4 shadow-top dark:shadow-xl">   
+              <div className="bg-white  dark:bg-gray-950 lg:pt-4 shadow-top dark:shadow-xl">   
 
                 <motion.h1 
-                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mb-3 lg:mt-4 font-serif" 
+                  className="text-5xl md:text-7xl font-semibold mb-2 lg:mb-4 mb-3 mt-0 lg:mt-4 font-serif" 
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1, transition: { duration: .5 } }}>   
                   {data.title}

@@ -12,7 +12,7 @@
 }
 
 .video-js {
-  @apply !bg-white;
+  @apply !bg-white ;
 }
 body {
    @apply antialiased bg-white dark:bg-gray-950;
@@ -40,6 +40,10 @@ body {
   
    h1 {
     @apply  text-6xl xl:text-7xl;
+  }
+
+  video {
+    @apply !mt-0;
   }
 
   h2 {
