@@ -2,6 +2,7 @@ import { RxInstagramLogo } from "react-icons/rx";
 import { VscMenu, VscClose } from "react-icons/vsc";
 import { motion } from "motion/react"
 import Link from "next/link";
+import { Badge } from '../ui/badge'
 import { ModeToggle } from "../ui/mode-toggle";
 import {
   Drawer,
@@ -49,8 +50,13 @@ export default function Header({ links }) {
                     <ul className="grid grid-cols-2   sm:grid-cols-3  lg:grid-cols-4  xl:grid-cols-5 gap-2 lg:gap-4 pt-10  lg:pt-0 pb-10 max-h-full  px-5">                     
                       {links && links.map((link, index) => ( 
                         <li className="aspect-video overflow-hidden bg-gray-800 duration-400 transition-all" key={index} >                                              
-                          <Link className="group aspect-video " href={`/locations/${link.slug}`}>
-                            <Image className="object-cover aspect-video w-full  duration-400 transition-all opacity-60 lg:opacity-100 group-hover:opacity-20 z-10 relative" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
+                          <Link className="group aspect-video relative " href={`/locations/${link.slug}`}>
+                            <div className="absolute top-2 top-2  left-6 group-hover:left-2 flex gap-1 z-20 opacity-0 group-hover:opacity-80 duration-400 transition-all" >
+                              {link.data.categories && link.data.categories.map((category, index) => (
+                                <Badge className="!text-xs " key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
+                              ))}           
+                            </div>
+                            <Image className="object-cover aspect-video w-full  duration-400 transition-all opacity-80 lg:opacity-100 group-hover:opacity-50 z-10 relative" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
                             <p className="duration-400 transition-all tracking-tight font-sans text-base md:text-lg xl:text-xl -mt-10 lg:mt-2 group-hover:-mt-10 ml-4 text-white z-20 relative lg:opacity-0 group-hover:opacity-100">
                               {link.data.title?.slice(0, 18)}
                             </p>

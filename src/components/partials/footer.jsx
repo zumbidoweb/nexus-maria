@@ -6,7 +6,7 @@ export default function Header({}) {
   return (
     <>  
       <div className="z-50 relative md:fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 shadow-top  dark:shadow-2xl">
-        <div className="px-6 pt-3 pb-7 relative">
+        <div className="px-6 pt-5 pb-5 relative">
           <div className="flex justify-between item-center">          
             <motion.div 
               className="flex gap-3 items-center"
@@ -17,7 +17,7 @@ export default function Header({}) {
                 <IoShareSocial size="24px" />
               </a>
 
-              <p className="font-serif text-sm md:text-base  text-right"> 
+              <p className="font-serif text-sm   text-right"> 
                 Greece 2024 |  <a href="https://www.mariagouveli.com" className="hover:text-red-700 duration-200 transition-color" target="_blank">
                   Maria Gouveli 
                 </a>  

@@ -27,8 +27,8 @@ const Map = function ({ links }) {
                   transform={`translate(${link.data.location})`}
                 />               
                 <Tooltip triggerRef={circleRef} >               
-                  <rect x={-110} rx="5" ry="5" y={-77} width={220} height={50} fill='white' border='#f7f7f7' />
-                  <text x={0} y={-50} alignmentBaseline="middle" textAnchor="middle" fontSize={20} fontWeight={600} fill='black'>{link.data.title}</text>           
+                  <rect x={-120} rx="5" ry="5" y={-77} width={240} height={52} fill='white' border='#f7f7f7' />
+                  <text x={0} y={-50} alignmentBaseline="middle" textAnchor="middle" fontSize={27} fontWeight={700} fill='black'>{link.data.title?.slice(0, 18)}</text>           
                   <polygon points="0,-10 -20,-30 20,-30" fill="white" />             
                 </Tooltip>
               </g>
