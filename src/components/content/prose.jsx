@@ -29,6 +29,7 @@ export const components = {
   Gallery: dynamic(() => import("./gallery")),
   AudioPlayer: dynamic(() => import("./audio")),
   Interview: dynamic(() => import("./interview")),
+  Youtube: dynamic(() => import("./youtube")),
   Head,
 };
 

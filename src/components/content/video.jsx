@@ -6,16 +6,19 @@ import { motion } from "motion/react"
 import { IoMdArrowUp } from "react-icons/io";
 
 
-export default function VideoPlayer({ title = '', width = "1920", height = "1080", loop = false, src, className = "", ...props }) {
+export default function VideoPlayer({ src, title = '', width = "1920", height = "1080", loop = false, autoplay = true, muted = true, bigPlayButton = false, className = "", ...props }) {
   return (
     <section className={`w-full pt-4 ${className}`}> 
       <div className=" ">       
         {title && <h2>{title}</h2>}
       </div>
       <div>  
-        <CldVideoPlayer autoplay loop={false} muted
+        <CldVideoPlayer 
+          autoplay={autoplay} 
+          muted={muted}         
+          bigPlayButton={bigPlayButton}          
+          loop={false} 
           playsinline
-          bigPlayButton={false}
           width={width}
           height={height}
           controls={true}

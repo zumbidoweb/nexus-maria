@@ -60,7 +60,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                   </motion.div>              
                   {slug == 'about' &&
                     <section className="mt-10 xl:mt-16 lg:mt-16 max-w-4xl"> 
-                      <h2 className=" font-semibold text-4xl font-serif mb-16">Project and locations</h2>
+                      <h2 className=" font-semibold text-4xl font-serif mb-12">Project and locations</h2>
                       <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-10 lg:gap-y-4">
                         {posts && posts.map((post, index) => ( 
                           <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                          
@@ -84,6 +84,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                   }   
                 </div>        
               </section>   
+
             </LocomotiveScrollProvider>
           </div>
         </div>

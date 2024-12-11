@@ -40,7 +40,7 @@ body {
   }
 
   video {
-    @apply !mt-0;
+    @apply !mt-0 !pt-0;
   }
 
   h2 {
