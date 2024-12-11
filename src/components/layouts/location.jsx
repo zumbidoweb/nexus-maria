@@ -9,7 +9,7 @@ import { Badge } from '../ui/badge'
 import Link from "next/link";
 import Image, { ImageProps } from 'next/image'
 import Head from 'next/head'
-
+import VideoPlayer from '@/components/content/video'
 
 export default function LocationLayout({ children, posts, data, slug }) {
 
@@ -64,13 +64,15 @@ export default function LocationLayout({ children, posts, data, slug }) {
                       <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-10 lg:gap-y-4">
                         {posts && posts.map((post, index) => ( 
                           <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                          
-                            <Link className="hover:opacity-100 opacity-80 duration-100 transition-all relative" href={`/locations/${post.slug}`}>
-                              <div className="hidden lg:block absolute top-2 left-2 flex gap-1 opacity-90 " >
-                                {post.data.categories && post.data.categories.map((category, index) => (
-                                  <Badge className="!text-xs dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
-                                ))}           
+                            <Link className="group relative" href={`/locations/${post.slug}`}>
+                              <div className=" flex relative z-20">
+                                <div className="hidden -mb-6 mt-6  ml-1 lg:inline-block opacity-80">
+                                  {post.data.categories && post.data.categories.map((category, index) => (
+                                    <Badge className="!text-xs dark:opacity-80" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
+                                  ))}   
+                                </div>        
                               </div>
-                              <Image className="object-cover aspect-video w-full" alt={post.slug} height={400} width={1000} src={`/locations/${post.slug}/cover.jpg`} />
+                              <Image className="object-cover aspect-video w-full group-hover:opacity-100 opacity-80  duration-200 transition-all" alt={post.slug} height={400} width={1000} src={`/locations/${post.slug}/cover.jpg`} />
                               <p className="font-sans text-lg font-bold mt-1 ">
                                 {post.data.title}
                               </p>
