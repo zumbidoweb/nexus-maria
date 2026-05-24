@@ -16,15 +16,14 @@ const Map = function ({ links }) {
           <Base />
           {links.map((link, index) => (   
             <g key={index}>
-              {link.data.location && <g>            
-                <motion.circle ref={circleRef} cx="10" cy="10" r="23"
-                  initial={{ opacity: 0, r: 0 }} animate={{ opacity: 1, r: 24, transition: { default: { delay: 0.5 + (index / 4), duration: 0.5, ease: "easeOut" } } }}
-                  className="cursor-pointer hover:opacity-50 opacity-100 transition-all duration-100"
+              {link.data.location && <g transform={`translate(${link.data.location})`}>            
+                <motion.circle ref={circleRef} cx="10" cy="10" r="28"
+                  initial={{ opacity: 0, r: 0 }} animate={{ opacity: 1, r: 28, transition: { default: { delay: 0.5 + (index / 4), duration: 0.5, ease: "easeOut" } } }}
+                  className="cursor-pointer hover:opacity-80 opacity-100 transition-opacity duration-200"
                   onClick={() => router.push(`/locations/${link.slug}`)}
                   fill={link.data.color}  
                   key={index}
                   data-name={link.data.title}            
-                  transform={`translate(${link.data.location})`}
                 />               
                 <Tooltip triggerRef={circleRef} >               
                   <rect x={-120} rx="5" ry="5" y={-77} width={240} height={52} fill='white' border='#f7f7f7' />

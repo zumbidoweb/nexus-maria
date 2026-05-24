@@ -25,20 +25,25 @@ const processImage = function (file) {
   }
 }
 
-chokidar.watch(['public/locations', 'content']).on('change', (event, path) => {
-  getMedia();
-  const touch = path => {
-    const time = new Date();
-    try {
-      utimesSync(path, time, time);
-    } catch (err) {
-      closeSync(openSync(path, "w"));
-    }
-  };      
-  const filename = "src/pages/_document.js";
-  var hack = createWriteStream(filename, { flags: 'a' });
-  hack.write(' ');     
-  touch(filename);
-});
+const watch = process.argv.includes('--watch');
+
+if (watch) {
+  const { utimesSync, closeSync, openSync, createWriteStream } = require('fs');
+  chokidar.watch(['public/locations', 'content']).on('change', () => {
+    getMedia();
+    const touch = (filePath) => {
+      const time = new Date();
+      try {
+        utimesSync(filePath, time, time);
+      } catch (err) {
+        closeSync(openSync(filePath, 'w'));
+      }
+    };
+    const filename = 'src/pages/_document.js';
+    const hack = createWriteStream(filename, { flags: 'a' });
+    hack.write(' ');
+    touch(filename);
+  });
+}
 
 getMedia();

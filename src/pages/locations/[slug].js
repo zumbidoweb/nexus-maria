@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Layout from "@/components/layouts/location";
 import { components } from "@/components/content/prose"
-import { postFilePaths, POSTS_PATH } from "../../utils/api-server";
+import { postFilePaths, POSTS_PATH, getPostLinks } from "../../utils/api-server";
 import { AnimatePresence } from 'framer-motion'
 
 export default function Location({ content, data, posts, slug }) {
@@ -31,15 +31,7 @@ export const getStaticProps = async ({ params }) => {
     slug: params.slug
    
   });
-  const posts = postFilePaths.map((filePath) => {
-    const { content, data } = matter(fs.readFileSync(path.join(POSTS_PATH, filePath)));
-    return {
-      content,
-      data,
-      slug: filePath.replace(/\.[^/.]+$/, ""),
-      filePath,
-    };
-  });
+  const posts = getPostLinks();
 
   return {
     props: {

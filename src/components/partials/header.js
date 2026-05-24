@@ -15,7 +15,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 import Image from "next/image";
-import { HiHomeModern } from "react-icons/hi2";
+import { HiGlobeAlt } from "react-icons/hi2";
 import { TbHexagonLetterNFilled } from "react-icons/tb";
 export default function Header({ links }) {
   return (
@@ -32,7 +32,10 @@ export default function Header({ links }) {
             className="pr-1 lg:pr-4 flex items-center gap-6"
             initial={{ opacity: 0, x: -20 }} 
             animate={{ opacity: 1, x: 0, transition: { duration: .6 } }}>
-            <ModeToggle />           
+            <Link href="/locations/about">
+              <HiGlobeAlt className="cursor-pointer" size="24px" />
+            </Link>
+            <ModeToggle />
             <Drawer>
               <DrawerTrigger><VscMenu className="cursor-pointer" size="24px" /></DrawerTrigger>
               <DrawerContent>     
@@ -50,13 +53,13 @@ export default function Header({ links }) {
                       {links && links.map((link, index) => ( 
                         <li className="aspect-video overflow-hidden bg-gray-800 duration-400 transition-all" key={index} >                                              
                           <Link className="group aspect-video relative " href={`/locations/${link.slug}`}>
-                            <div className="hidden lg:block absolute top-2 top-2  left-6 group-hover:left-2 flex gap-1 z-20 opacity-0 group-hover:opacity-80 duration-400 transition-all" >
+                            <div className="absolute top-2 left-2 right-2 flex flex-wrap gap-1 z-20 opacity-80 group-hover:opacity-0 duration-400 transition-all" >
                               {link.data.categories && link.data.categories.map((category, index) => (
-                                <Badge className="!text-xs " key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
+                                <Badge className="!text-[10px] !px-1.5 !pt-0.5 !pb-0 !leading-tight" key={index} style={{ backgroundColor: category.toRGB() }}>{category}</Badge>
                               ))}           
                             </div>
-                            <Image className="object-cover aspect-video w-full  duration-400 transition-all opacity-80 lg:opacity-100 group-hover:opacity-50 z-10 relative" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
-                            <p className="duration-400 transition-all tracking-tight font-sans text-base md:text-lg xl:text-xl -mt-10 lg:mt-2 group-hover:-mt-10 ml-4 text-white z-20 relative lg:opacity-0 group-hover:opacity-100">
+                            <Image className="object-cover aspect-video w-full duration-400 transition-all opacity-50 group-hover:opacity-100 z-10 relative" alt={link.slug} height={400} width={1000} src={`/locations/${link.slug}/cover.jpg`} />
+                            <p className="duration-400 transition-all tracking-tight font-sans text-base md:text-lg xl:text-xl -mt-10 ml-4 text-white z-20 relative opacity-100 group-hover:opacity-0">
                               {link.data.title?.slice(0, 18)}
                             </p>
                           </Link>

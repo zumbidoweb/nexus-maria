@@ -12,7 +12,19 @@ export const postFilePaths = fs
     .readdirSync(POSTS_PATH)
     // Only include md(x) files
     .filter((path) => /\.mdx?$/.test(path))
-    .filter((path) => ! /\intro.mdx?$/.test(path));
+    .filter((path) => ! /\intro.mdx?$/.test(path))
+    .sort((a, b) => a.localeCompare(b));
+
+export function getPostLinks() {
+    return postFilePaths.map((filePath) => {
+        const { data } = matter(fs.readFileSync(path.join(POSTS_PATH, filePath)));
+        return {
+            data,
+            slug: filePath.replace(/\.[^/.]+$/, ""),
+            filePath,
+        };
+    });
+}
 
 
 export async function getPosts() {

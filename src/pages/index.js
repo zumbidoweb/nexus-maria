@@ -1,8 +1,5 @@
-import fs from "fs";
-import matter from "gray-matter";
 import Link from "next/link";
-import path from "path";
-import { postFilePaths, POSTS_PATH } from "@/utils/api-server";
+import { getPostLinks } from "@/utils/api-server";
 import { MDXRemote } from "next-mdx-remote";
 import { components } from "@/components/content/prose"
 import { serialize } from "next-mdx-remote/serialize";
@@ -66,15 +63,7 @@ export default function Index({ posts }) {
 }
 
 export const getStaticProps = () => {
-  const posts = postFilePaths.map((filePath) => {
-    const { content, data } = matter(fs.readFileSync(path.join(POSTS_PATH, filePath)));
-    return {
-      content,
-      data,
-      slug: filePath.replace(/\.[^/.]+$/, ""),
-      filePath,
-    };
-  });
+  const posts = getPostLinks();
   return { 
     props: { 
       posts,

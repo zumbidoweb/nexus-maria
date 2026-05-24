@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image, { ImageProps } from 'next/image'
 import Head from 'next/head'
 import VideoPlayer from '@/components/content/video'
+import { IoMdArrowUp } from "react-icons/io"
 
 export default function LocationLayout({ children, posts, data, slug }) {
 
@@ -31,7 +32,10 @@ export default function LocationLayout({ children, posts, data, slug }) {
             <div className="pl-2 lg:pl-6 max-w-2xl lg:pr-0  pt-24 lg:pt-32 w-full relative top-0 left-0 ">   
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: .8 } }}>       
                 <Map links={posts} /> 
-                <div className="-mt-7 text-xs text-gray-500 text-center hidden  lg:block">click at the dots to navigate</div> 
+                <div className="-mt-7 flex flex-col items-center gap-1 text-gray-500 hidden lg:flex">
+                  <IoMdArrowUp className="text-lg" />
+                  <p className="text-sm font-medium">click at the dots to navigate</p>
+                </div> 
               </motion.div>  
             </div>  
           </div> 
@@ -60,7 +64,7 @@ export default function LocationLayout({ children, posts, data, slug }) {
                   </motion.div>              
                   {slug == 'about' &&
                     <section className="mt-10 xl:mt-16 lg:mt-16 max-w-4xl"> 
-                      <h2 className=" font-semibold text-4xl font-serif mb-12">Project and locations</h2>
+                      <h2 className=" font-semibold text-4xl font-serif mb-12">Locations</h2>
                       <ul className="grid grid-cols-2   md:grid-cols-3 pb-32 gap-x-6 gap-y-10 lg:gap-y-4">
                         {posts && posts.map((post, index) => ( 
                           <li key={index} className="-mt-4" data-scroll data-scroll-speed={.8 + (index / 5)}>                                          
